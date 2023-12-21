@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="1.0"> -->
+    <title>VC É DE FORA?</title>
+</head>
+<body>
+    <h1>Estrangeirismo</h1>
+    País onde nasceu: <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="verificar" onclick="verNacionalidade()">
+    <div id="res">
+
+    </div>
+    <script>
+        function verNacionalidade() {
+            let caminho = window.document.querySelector('input#txtpais')
+            let res = window.document.querySelector('div#res')
+            let txtpais = caminho.value
+            if (txtpais.toUpperCase() == 'BRASIL') {
+                res.innerHTML = `<p>Voce é Brasileiro!!! &#x1F5FF;&#x1F60E;&#128526;</p>`
+            } else {
+                res.innerHTML = '<p>Voce é Estrangeiro, eca &#x1F922;</p>'
+            }
+        }
+    </script>
+</body>
+</html>
