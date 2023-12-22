@@ -9,16 +9,22 @@
 <body>
     <h1>Estrangeirismo</h1>
     País onde nasceu: <input type="text" name="txtpais" id="txtpais">
-    <input type="button" value="verificar" onclick="verNacionalidade()">
+    <input type="button" value="verificar" onclick="verNacionalidade()" onkeyup="verNacionalidade()">
     <div id="res">
 
     </div>
+    
+    <div>
+        <h1 style="text-align: center;">&#x1F60E;VEM COISA NOVA AI MEUS CRIAS!!!&#x1F60E;</h1>
+        <p style="text-align: center;">ana &copy;arolina te amo meu amô &#x1F496;</p>
+    </div>
+    
     <script>
         function verNacionalidade() {
             let caminho = window.document.querySelector('input#txtpais')
             let res = window.document.querySelector('div#res')
             let txtpais = caminho.value
-            if (txtpais.toUpperCase() == 'BRASIL') {
+            if (txtpais.toUpperCase().trim() == 'BRASIL') {
                 res.innerHTML = `<p>Voce é Brasileiro!!! &#x1F5FF;&#x1F60E;&#128526;</p>`
             } else {
                 res.innerHTML = '<p>Voce é Estrangeiro, eca &#x1F922;</p>'
